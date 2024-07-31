@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <title>Adidas | Meus pedidos</title>
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+   />
+</head>
+<body class="flex flex-col bg-stone-200 h-screen">
+  <header class="sticky top-0 shadow-slate-400 shadow-xl z-10">
+    <section id="cabecalho" class="flex justify-between px-20 bg-slate-950 text-xl">
+      <a href="./">
+        <img class="h-[85px] py-4" src="./imagens/logoadidas.png" alt="Logotipo">
+      </a>  
+    </section>
+  </header>
+  <form class="flex w-100 px-5 gap-4 py-10 grow">
+      
+    <section id="dados-usuario" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="mb-5 text-center font-bold">Seus Dados</p>
+        <div class="flex flex-col px-10 py-3">
+            <label for="nome" class="font-bold text-sm mb-2">Nome:</label>
+            <input type="text" id="nome" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Digite seu nome..." required/>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="email" class="font-bold text-sm mb-2">Email:</label>
+            <input type="email" id="email" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Email..." required/>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="telefone" class="font-bold text-sm mb-2">Telefone:</label>
+            <input type="tel" id="telefone" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="(xx)xxxx-xxxx" required/>
+        </div>
+      </section>
+      
+      <section id="pagamento-entrega" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="mb-5 text-center font-bold">Pagamento e Entrega</p>
+        <div class="flex flex-col px-10 py-3">
+            <label for="numero-cartao" class="font-bold text-sm mb-2">Número do cartão:</label>
+            <input type="text" id="numero-cartao" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="1111 1111 1111 1111" required/>
+        </div>
+        <div class="flex">
+            <div class="flex flex-col px-10 py-3 w-1/2">
+                <label for="numero-cvv" class="font-bold text-sm mb-2">CVV:</label>
+                <input type="text" id="numero-cvv" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="111" required/>
+            </div>
+            <div class="flex flex-col px-10 py-3 w-1/2">
+                <label for="data-validade" class="font-bold text-sm mb-2">Data de Validade:</label>
+                <input type="text" id="data-validade" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="01/30" required/>
+            </div>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="numero-cep" class="font-bold text-sm mb-2">CEP:</label>
+          <input type="text" id="numero-cep" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="11222-333" required/>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="endereco" class="font-bold text-sm mb-2">Endereço:</label>
+          <input type="text" id="endereco" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Avenida XV de Março" required/>
+        </div>
+        <div class="flex">
+          <div class="flex flex-col px-10 py-3 w-1/2">
+              <label for="numero-residencia" class="font-bold text-sm mb-2">Número:</label>
+              <input type="text" id="numero-residencia" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="240" required/>
+          </div>
+          <div class="flex flex-col px-10 py-3 w-1/2">
+              <label for="complemento" class="font-bold text-sm mb-2">Complemento:</label>
+              <input type="text" id="complemento" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Apto.15" required/>
+          </div>
+      </div>
+      </section>
+    
+      <section id="produtos-checkout" class="w-1/3 bg-white rounded-lg py-5">
+        <section id="container-Produtos-Checkout" class="h-4/5 overflow-y-auto px-2"></section>
+        <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around">
+          <p id="total-compra" class="bg-slate-200 text-green-800 rounded-lg pl-5">Total: R$200,00</p>
+          <button class="flex bg-slate-900 text-slate-200 p-1.5 font-sans justify-center font-semibold    hover:bg-slate-800" type="submit">Finalizar Compra</button>
+        </section>
+      </section>
+  </form>
+  <script src="./checkout.js" type="module"></script>
+</body>
+</html>
